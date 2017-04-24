@@ -1,0 +1,213 @@
+@(users: List[models.users.Users], products: List[models.Product], Transactions: List[models.Users_library],user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Users", user) {
+    <!-- HTML content for the index view -->
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+
+                <!-- Wrapper -->
+            <section id="wrapper">
+
+
+                    <!-- Two -->
+                <section id="two" class="wrapper alt spotlight style2" style="margin-top: 20px;">
+                    <div class="inner">
+
+
+                    </div>
+                    <h1 class="SubTitles" style="margin-left: 15px">@user.getName() 's Profile</h1>
+                    <div class="panel-body">
+                        @if(flash.containsKey("success")) {
+                            <div class="alert alert-success">
+                            @flash.get("success")
+                            </div>
+                        }
+                        <table style="margin-top: 2px; padding-top: 0px">
+                            <thead>
+                                    <!-- The header row-->
+                                <tr>
+                                    <th style = "color: white">Email</th>
+                                    <th style = "color: white">Name</th>
+                                    <th style = "color: white">Address</th>
+                                    <th style = "color: white">Number</th>
+                                    <th style = "color: white">Password</th>
+                                    <th style = "color: white">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    <!-- Product row(s) -->
+                                    <!-- Start of For loop - For each p in products add a row -->
+
+                                <tr>
+                                    <td>@user.getEmail</td>
+                                    <td>@user.getName</td>
+                                    <td>@user.getAddress</td>
+                                    <td>@user.getNumber</td>
+                                    <td>@user.getPassword</td>
+                                    <td>@user.getPoints</td>
+
+                                    <td>
+                                        <a href="@routes.HomeController.updateProfile(user.getEmail)" class="btn-xs btn-danger">EDIT PROFILE
+                                            <span class="glyphicon glyphicon-pencil"></span></a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <table >
+                            <thead>
+                                <h1 style = "color: white;"> Items </h1>
+                                    <!-- The header row-->
+
+                                <tr>
+                                    <th style = "color: white">ID</th>
+                                    <th style = "color: white">Product ID</th>
+                                    <th style = "color: white">User Email</th>
+                                    <th style = "color: white">Date Of transaction </th>
+                                    <th style = "color: white">Expire Date</th>
+                                    <th style = "color: white">Return</th>
+                                    <th style = "color: white;">Extend</th>
+
+                                </tr>
+
+
+                                @for(p <- Transactions){
+                                    @if(p.getUser_email.equalsIgnoreCase(user.getEmail)){
+                                        <tr>
+                                            <td>@p.getId</td>
+                                            <td>@p.getUser_product_id</td>
+                                            <td>@p.getUser_email</td>
+                                            <td>@p.getDate_transaction</td>
+                                            <td>@p.getExpiring_date</td>
+                                            <td>@p.getReturned
+                                                @if(p.getReturned() == "false"){
+                                                    <a href="@routes.HomeController.updateReturn(p.getId)" class="btn-xs btn-danger">
+                                                        return <span class="glyphicon glyphicon-pencil"></span></a>
+                                                }
+
+
+                                            </td>
+                                            <td>@p.getextendable
+                                                @if(p.getextendable() == "true" ){
+                                                    @if(p.getReturned() != "true"){
+                                                        <a href="@routes.HomeController.updateTransaction(p.getId)" class="btn-xs btn-danger">
+                                                            Extend <span class="glyphicon glyphicon-pencil"></span></a>
+                                                    }
+
+                                                }
+                                                
+
+
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+
+                            </thead>
+                        </table>
+                        <table >
+                            <thead>
+                                <h1 style = "color: white;"> Softwares </h1>
+                                    <!-- The header row-->
+
+                                <tr>
+                                    <th style = "color: white">Product ID</th>
+                                    <th style = "color: white">Software</th>
+                                    <th style = "color: white">User Email</th>
+                                    <th style = "color: white">Date Of transaction </th>
+                                    <th style = "color: white">Expire Date</th>
+                                </tr>
+
+
+                                @for(p <- Transactions){
+                                    @if(p.getUser_email.equalsIgnoreCase(user.getEmail)){
+                                        <tr>
+                                            <td>@p.getUser_product_id</td>
+                                            <td> @if(p.getUser_product_id() == 1){
+                                                @if(p.getReturned() == "false"){
+                                                    <a href="@routes.Assets.versioned("documents/2015.pdf")"> Networking 2016 Year 2 Semester 3 exam papers</a>
+                                                    }
+                                                }
+                                                @if(p.getUser_product_id() == 2){
+                                                @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/2014.pdf")"> Networking 2015 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 3){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/2014.pdf")"> Networking 2014 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 4){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/SD2016.pdf")"> Software 2016 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 5){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/SD2015.pdf")"> Software 2015 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 6){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/SD2014.pdf")"> Software 2014 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 7){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/MD2016.pdf")"> Discrete Mathematics 2016 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 8){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/MD2015.pdf")"> Discrete Mathematics 2015 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 9){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/MD2014.pdf")"> Discrete Mathematics 2014 Year 2 Semester 3 exam papers</a>
+                                                      }
+                                                }
+                                                 @if(p.getUser_product_id() == 10){
+                                                 @if(p.getReturned() == "false"){
+                                                      <a href="@routes.Assets.versioned("documents/WS.pdf")"> Wall Street Survivor</a>
+                                                      }
+                                                }</td>
+                                            <td>@p.getUser_email</td>
+                                            <td>@p.getDate_transaction</td>
+                                            <td>@p.getExpiring_date</td>
+                                        </tr>
+                                    }
+                                }
+
+                            </thead>
+                        </table>
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+        <div class="col-sm-12" style="margin-top: 5%;">
+
+
+                </div>
+
+}

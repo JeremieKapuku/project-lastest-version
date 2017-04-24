@@ -1,0 +1,123 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+
+GET     /                     controllers.HomeController.index
+
+GET     /about                controllers.HomeController.about
+
+GET     /rent                 controllers.HomeController.rent(cat:Long ?=0L)
+
+# products accepts a parameter default to 0 (Long)
+GET     /products                    controllers.HomeController.products(cat:Long ?=0L)
+
+GET     /signup                      controllers.HomeController.signup
+
+GET     /profile                     controllers.HomeController.profile(cat:Long ?=0L)
+
+GET     /reserve                     controllers.HomeController.reserve
+
+GET     /threeday                   controllers.HomeController.threeday
+
+GET     /fiveday                   controllers.HomeController.fiveday
+
+GET     /sevenday                   controllers.HomeController.sevenday
+
+GET     /addReserveSubmit/:email            controllers.HomeController.addReserveSubmit(email: String)
+
+GET     /updateReserve/:id           controllers.HomeController.updateReserve(id: Long)
+
+GET     /ThreeDayLoan/:email                controllers.HomeController.ThreeDayLoan(email: String)
+
+GET     /FiveDayLoan/:email                controllers.HomeController.FiveDayLoan(email: String)
+
+GET     /SevenDayLoan/:email                controllers.HomeController.SevenDayLoan(email: String)
+
+GET     /profileUpdate               controllers.HomeController.profileUpdate
+
+GET     /transactionUpadate          controllers.HomeController.transactionUpdate
+
+GET     /returnUpdate          controllers.HomeController.returnUpdate
+
+GET     /addProfileSubmit            controllers.HomeController.addProfileSubmit
+
+GET     /addTransactionSubmit            controllers.HomeController.addTransactionSubmit
+
+GET     /addReturnSubmit/:email            controllers.HomeController.addReturnSubmit(email: String)
+
+GET     /updateThreeDayLoan/:id   controllers.HomeController.updateThreeDayLoan(id: Long)
+
+GET     /updateFiveDayLoan/:id   controllers.HomeController.updateFiveDayLoan(id: Long)
+
+GET     /updateSevenDayLoan/:id   controllers.HomeController.updateSevenDayLoan(id: Long)
+
+GET     /updateProfile/:email        controllers.HomeController.updateProfile(email: String)
+
+GET     /updateTrasaction/:id     controllers.HomeController.updateTransaction(id: Long)
+
+GET     /updateReturn/:id     controllers.HomeController.updateReturn(id: Long)
+
+#GET     /assets/css/font-awesome.min.css controllers.Assets.at(/assets, js/,jquery.min)
+
+
+################
+# Admin Routes #
+################
+
+
+# products accepts a parameter default to 0 (Long)
+
+GET     /admin/products               controllers.AdminController.products(cat:Long ?=0L)
+GET     /admin/service               controllers.AdminController.service(cat:Long ?=0L)
+
+GET     /admin/Transaction               controllers.AdminController.Transaction
+
+GET     /admin/rent                 controllers.HomeController.rent(cat:Long ?=0L)
+
+# users accepts a parameter default to 0 (Long)
+GET     /admin/users             controllers.AdminController.users(cat:Long ?=0L)
+
+GET     /admin/addUsers            controllers.AdminController.addUsers
+
+GET     /admin/addUsersSubmit      controllers.AdminController.addUsersSubmit
+
+GET     /admin/updateUsers/:email  controllers.AdminController.updateUsers(email: String)
+
+# Delete a user by an email passed as a parameter
+GET     /admin/delUsers/:email     controllers.AdminController.deleteUsers(email: String)
+
+# Request to load the add product form
+GET     /admin/addproduct                  controllers.AdminController.addProduct
+
+# Data submitted by the form
+POST    /admin/addProductSubmit            controllers.AdminController.addProductSubmit
+
+# Delete a product by an id passed as a parameter
+GET    /admin/delProduct/:id               controllers.AdminController.deleteProduct(id: Long)
+
+# Update a product by id
+GET	    /admin/updateProduct/:id        controllers.AdminController.updateProduct(id: Long)
+
+
+################
+# Login Routes #
+################
+GET     /login                      controllers.security.LoginController.login
+POST    /loginSubmit                controllers.security.LoginController.loginSubmit
+GET     /logout                     controllers.security.LoginController.logout
+
+# Data submitted by the form
+POST    /addUsersSubmit             controllers.HomeController.addUsersSubmit
+
+# Delete a product by an id passed as a parameter
+GET    /delProduct/:id            controllers.HomeController.deleteProduct(id: Long)
+
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

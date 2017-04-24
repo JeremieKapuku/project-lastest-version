@@ -1,0 +1,94 @@
+@(products: List[models.Product], categories: List[models.Category], user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Products", user) {
+  <!-- HTML content for the index view -->
+  <div class="row">
+      <div class="col-sm-2">
+          <h4>Categories</h4>
+            <div class="list-group">
+                <!-- A link to display all products -->
+                <a href="@routes.HomeController.rent(0)" class="list-group-item">All categories</a>
+
+                <!-- Start of For loop - For each c in categories add a list item -->
+                <!-- Also show the number of products in each category -->
+                @for(c <- categories) {
+                    <a href="@routes.HomeController.rent(c.getId)" class="list-group-item">@c.getName
+                      <span class="badge">@c.getProducts.size()</span>
+                    </a>
+                }
+            </div>
+      </div>
+      <div class="col-sm-7">
+          @if(flash.containsKey("success")) {
+              <div class="alert alert-success">
+              @flash.get("success")
+              </div>
+          }
+          <table class="table table-bordered table-hover table-condensed">
+          <thead>
+          <!-- The header row-->
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Reserve</th>
+              <th>Loan</th>
+                
+          </tr>
+          </thead>
+          <tbody>
+            <!-- Product row(s) -->
+					<!-- Start of For loop - For each p in products add a row -->
+          @for(p <- products) {
+			        <tr>
+                  <td>@p.getId</td>
+                  <td>@p.getName</td>
+                  <td>@p.getDescription</td>
+                  <td>@p.getStock</td>
+                  <td>&euro; @("%.2f".format(p.getPrice))</td>
+                    <td>
+                      <a href="@routes.HomeController.updateReserve(p.getId)" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+
+                     <td>
+                      <a href="@routes.HomeController.updateLoan(p.getId)" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+
+				    </tr>
+					} <!-- End of For loop -->
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-3">
+          <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Stock</th>
+              <th>Reserve</th>
+              <th>Loan</th>
+
+          </tr>
+
+          <tr>
+          @for(p <- products) {
+              <td>@p.getId</td>
+          }</tr>
+
+      </div>
+  </div>
+
+  <script>
+    // JavaScript function returns true if user clicks yes, otherwise, false
+    function confirmDel() {
+        return confirm('Are you sure?');
+    }
+  </script>
+
+  <!-- End of content for main -->
+}

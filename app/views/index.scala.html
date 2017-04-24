@@ -1,0 +1,73 @@
+@(user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Home", user) {
+  <!-- HTML content for the index view -->
+  <div class="row">
+      <div class="col-sm-12">
+              <!-- Header -->
+          <header id="header">
+              <h1><a href="@routes.HomeController.index()"><span class="glyphicon glyphicon-book"></span> DUT Library</a></h1>
+              <nav>
+                  <a href="#menu">Menu</a>
+              </nav>
+          </header>
+
+              <!-- Banner -->
+          <section id="banner">
+              <div class="inner">
+                  <h2><span class="glyphicon glyphicon-book"></span> DUT Library</h2>
+                  <p> A service to all our students</p>
+              </div>
+          </section>
+
+              <!-- Wrapper -->
+          <section id="wrapper">
+
+                  <!-- One -->
+              <section id="one" class="wrapper spotlight style1">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="@routes.Assets.versioned("images/pic01.jpg")" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Loan products</h2>
+                          <p>Our services provides our student's with a service to download exam papers and books.</p>
+                          @if(user != null) {
+                          <a href="@routes.HomeController.rent()" class="special">Have a look</a>
+                          }else {
+                          <a href="@routes.HomeController.products()" class="special">Have a look</a>
+                          }
+                      </div>
+                  </div>
+              </section>
+
+                  <!-- Two -->
+              <section id="two" class="wrapper alt spotlight style2">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="@routes.Assets.versioned("images/pic02.jpg")" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Open for all students</h2>
+                          <p>Sign up now and gain an advantage on your exams!</p>
+                          <a href="@routes.HomeController.signup()" class="special">Learn more</a>
+                      </div>
+                  </div>
+              </section>
+
+                  <!-- Three -->
+              <section id="three" class="wrapper spotlight style3">
+                  <div class="inner">
+                      <a href="#" class="image"><img src="@routes.Assets.versioned("images/pic03.jpg")" alt="" /></a>
+                      <div class="content">
+                          <h2 class="major">Products ranging from hardware to software</h2>
+                          <p>Each product enables our students to further their passion for your course and guarantee's a successful future</p>
+                     @if(user != null) {
+                          <a href="@routes.HomeController.rent()" class="special">Have a look</a>
+                          }else {
+                          <a href="@routes.HomeController.products()" class="special">Have a look</a>
+                          } </div>
+                  </div>
+              </section>
+      </div>
+  </div>
+  <!-- End of content for main -->
+}
+

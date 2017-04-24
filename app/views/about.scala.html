@@ -1,0 +1,75 @@
+@(user: models.users.Users)
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("About", user) {
+    <div class="row">
+        <div class="col-sm-12">
+                <!-- Header -->
+            <header id="header">
+                <h1><a href="@routes.HomeController.index()"><span class="glyphicon glyphicon-book"></span> DUT Library</a></h1>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+
+                <!-- Two -->
+            <section id="two" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <a href="#" class="image"><img src="@routes.Assets.versioned("images/give.jpg")" alt="" /></a>
+                    <div class="content">
+                        <h2 class="major">Who are we and what do we do?</h2>
+                        <p>We're a team that provides a limited burrowing service for college students.</p>
+                        <p>Students are allowed to create a personal account that will allow them to burrow products for a limited amount of time.</p>
+                        <p>If you require any aid, feel free to contact to any of our friendly staff.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Three -->
+                <section id="three" class="wrapper spotlight style3">
+                    <div class="inner">
+                        <a href="#" class="image"><img src="@routes.Assets.versioned("images/confused.png")" alt="" /></a>
+                        <div class="content">
+                            <h2 class="major">How does the Point System work?</h2>
+                            <p>When you sign up, the new account will have 100 points. The User can then loan a product for 3, 5 or 7 days which will cost 30, 50 and 100 points respectively.</p>
+                            <p>To retrieve the spent points, you must return the product and you can do this via personal account or by an admin in the building.</p>
+                        </div>
+                    </div>
+                </section>
+
+                    <!-- Four -->
+                <section id="four" class="wrapper alt style1">
+                    <div class="inner">
+                        <h2 class="major">Meet our Staff</h2>
+                        <section class="features">
+                            <article>
+                                <a href="" class="image"><img src="@routes.Assets.versioned("images/pic04.jpg")" alt="" /></a>
+                                <h3 class="major">Michael White</h3>
+                                <p>Michael is a our system advicer. Michael has added the library's development and upbrining till this day.</p>
+                            </article>
+                            <article>
+                                <a href="" class="image"><img src="@routes.Assets.versioned("images/pic05.jpg")" alt="" /></a>
+                                <h3 class="major">Tyrone Phillip</h3>
+                                <p>Tyrone is our system analyst ensuring that our student receive the best software, software can ofer.</p>
+                            </article>
+                            <article>
+                                <a href="" class="image"><img src="@routes.Assets.versioned("images/pic06.jpg")" alt="" /></a>
+                                <h3 class="major">Jerome Jamal</h3>
+                                <p> Jerome is our library assisant.Jerome is also currently a student at dut as well majoring in Human Resources.</p>
+                            </article>
+                            <article>
+                                <a href="" class="image"><img src="@routes.Assets.versioned("images/pic07.jpg")" alt="" /></a>
+                                <h3 class="major">Peter Oisin</h3>
+                                <p>Peter Oisin's our librarain. Aiding all our students who wishes to loan our products being pyschially or virtually.</p>
+                            </article>
+                        </section>
+                        <ul class="actions">
+                            <li><a href="#" class="button">Browse All</a></li>
+                        </ul>
+                    </div>
+                </section>
+        </div>
+    </div>
+        <!-- End of content for main -->
+}

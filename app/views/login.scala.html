@@ -1,0 +1,43 @@
+@(loginForm: Form[models.users.Login], user: models.users.Users)
+@import helper._
+
+@* Pass page title and content {html between braces} to the main view *@
+@main("Login", user){
+
+    <section id="two" class="wrapper alt spotlight style2">
+        <div class="inner">
+            <a href="#" class="image"><img src="@routes.Assets.versioned("images/pic08.jpg")" alt="" /></a>
+            <div class="content">
+                <div class="col-xs-12">
+                    <h3> Sign in</h3>
+
+                    @if(loginForm.hasGlobalErrors){
+                        <p class="alert alert-warning">
+                        @loginForm.globalError.message
+                        </p>
+                    }
+                    @if(flash.containsKey("error")){
+                        <div class="alert alert-warning">
+                        @flash.get("loginRequired")
+                        </div>
+                    }
+
+                    @helper.form(action = controllers.security.routes.LoginController.loginSubmit()){
+                        <div class="form-group">
+                        @inputText(loginForm("email"), '_label -> "",'class -> "form-control input-xs", 'placeholder -> "Email")
+                        </div>
+                        <div class="form-group">
+                        @inputPassword(loginForm("password"),'_label -> "",'class -> "form-control input-xs",'placeholder -> "Password")
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Sign In" class="btn btn-primary">
+                        </div>
+                    } @*Endof Form *@
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+}

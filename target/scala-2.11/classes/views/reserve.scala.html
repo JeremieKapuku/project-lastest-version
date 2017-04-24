@@ -1,0 +1,30 @@
+@* addProductForm defined above is the parameter passed to this view by the controller *@
+@import helper._
+
+@(addProductForm: play.data.Form[models.Product],user: models.users.Users)
+
+@* helpers will be used to create the form dynamically, though static HTML form element also work. *@
+
+@main("Confirm Reservation", user) {
+	<h3>Reservation</h3>
+	
+	<!-- Use the views.html.helpers package to create the form -->
+	@form(action = routes.HomeController.addReserveSubmit(), 'class -> "form-horizontal", 'role->"form") {
+		<!-- Hidden ID field - required for product updates -->	
+		@inputText(addProductForm("available"), '_label -> "", 'hidden -> "hidden")
+		@inputText(addProductForm("id"), '_label -> "", 'hidden -> "hidden")
+	
+		@inputText(addProductForm("slot1"), '_label -> "Please enter the name of item you wish to reserve",'class -> "form-control")
+    @inputText(addProductForm("validAvailable"), '_label -> "Enter Reserved/reserved to confirm your reservation",'class -> "form-control")
+
+	
+	<!-- Add a submit button -->
+  <div class="actions">
+      <input type="submit" value="Save" class="btn btn-primary">
+			<a href="@routes.HomeController.rent()"><button class="btn btn-warning">Cancel</button>
+	  		</a>
+  </div>
+	} <!-- End Form definition -->
+
+} <!-- End of page content -->
+

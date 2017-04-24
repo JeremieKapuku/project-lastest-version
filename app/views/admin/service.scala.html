@@ -1,0 +1,29 @@
+@(products: List[models.Product], categories: List[models.Category], user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@admin.adminMain("service", user) {
+
+    <!-- HTML content for the index view -->
+    <!-- Wrapper -->
+    <section id="wrapper">
+
+            <!-- One -->
+        <section id="one" class="wrapper spotlight style1">
+            @*<div class="inner">*@
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <iframe src="@routes.AdminController.products()" width="100%" height="700px" seamless ></iframe>
+                            </div>
+                            <div class="col-sm-4">
+                                <iframe src="@routes.AdminController.users()" width="100%" height="700px" seamless ></iframe>
+                            </div>
+                        </div>
+                    @*</div>*@
+                </div>
+            </div>
+        </section>
+    </section>
+
+}

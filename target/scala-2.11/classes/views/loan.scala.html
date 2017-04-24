@@ -1,0 +1,32 @@
+@* addProductForm defined above is the parameter passed to this view by the controller *@
+@import helper._
+
+@(addLoanForm: play.data.Form[models.Product],user: models.users.Users)
+
+@* helpers will be used to create the form dynamically, though static HTML form element also work. *@
+
+@main("Confirm Loan", user) {
+	<h3>Loaning</h3>
+	
+	<!-- Use the views.html.helpers package to create the form -->
+	@form(action = routes.HomeController.addLoanSubmit(user.getEmail), 'class -> "form-horizontal", 'role->"form") {
+			<!-- Hidden ID field - required for product updates -->
+		@inputText(addLoanForm("id"), '_label -> "", 'hidden -> "hidden")
+		@inputText(addLoanForm("stock"), '_label -> "", 'hidden -> "hidden")
+		@inputText(addLoanForm("validAvailable"), '_label -> "", 'hidden -> "hidden")
+
+		
+	  @inputText(addLoanForm("userLoan"), '_label -> "Please enter the name of item you wish to loan",'class -> "form-control")
+    @inputText(addLoanForm("available"), '_label -> "Enter Loaned/loaned to confirm your loan",'class -> "form-control")
+		@inputText(addLoanForm("quantity"), '_label -> "Enter the amount you wish to loan",'class -> "form-control")
+
+	<!-- Add a submit button -->
+  <div class="actions">
+      <input type="submit" value="Save" class="btn btn-primary">
+			<a href="@routes.HomeController.rent()"><button class="btn btn-warning">Cancel</button>
+	  		</a>
+  </div>
+	} <!-- End Form definition -->
+
+} <!-- End of page content -->
+

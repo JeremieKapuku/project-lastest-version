@@ -1,0 +1,49 @@
+@* addProductForm defined above is the parameter passed to this view by the controller *@
+@import helper._
+
+@(UsersLibraryForm: play.data.Form[models.Users_library], user: models.users.Users)
+
+@* helpers will be used to create the form dynamically, though static HTML form element also work. *@
+
+
+@main("Update Transaction", user) {
+
+
+	<!-- Use the views.html.helpers package to create the form -->
+
+	@form(action = routes.HomeController.addTransactionSubmit(), 'class -> "form-horizontal", 'role->"form") {
+
+
+        <div style="display: none">
+
+        @inputText(UsersLibraryForm("Id"), '_label -> "Id",'class -> "form-control",'style -> "display: none")
+        @inputText(UsersLibraryForm("User_product_id"), '_label -> "User_product_id",'class -> "form-control",'style -> "display: none")
+        @inputText(UsersLibraryForm("User_email"), '_label -> "User_email",'class -> "form-control",'style -> "display: none")
+        @inputDate(UsersLibraryForm("Date_transaction"), '_label -> "Date_transaction",'class -> "form-control",'style -> "display: none")
+        @inputDate(UsersLibraryForm("Expiring_date"), '_label -> "Expiring_date",'class -> "form-control",'style -> "display: none")
+
+        </div>
+
+
+
+
+
+	<!-- Add a submit button -->
+
+        <!-- Two -->
+    <section id="two" class="wrapper alt spotlight style2">
+        <div class="inner">
+            <div class="content">
+                <div class="actions">
+                    <h2>Item has been extended by 3 days.</h2>
+                    <input type="submit" value="Continue" class="btn btn-primary">
+                    <a href="@routes.HomeController.transactionUpdate()"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+	} <!-- End Form definition -->
+}
+-- End of page content -->

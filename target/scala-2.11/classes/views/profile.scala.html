@@ -1,0 +1,78 @@
+@(users: List[models.users.Users], products: List[models.Product], user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@main("Users", user) {
+   <!-- HTML content for the index view -->
+  <div class="row">
+                  <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="SubTitles">@user.getName() Profile</h4>
+                    </div>
+                    <div class="panel-body">
+                            @if(flash.containsKey("success")) {
+              <div class="alert alert-success">
+              @flash.get("success")
+              </div>
+          }
+          <table class="table table-bordered table-hover table-condensed">
+          <thead>
+          <!-- The header row-->
+          <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Number</th>
+            <th>Password</th>
+            <th>Points</th>
+          </tr>
+          </thead>
+          <tbody>
+            <!-- Product row(s) -->
+					<!-- Start of For loop - For each p in products add a row -->
+          
+			        <tr>
+                  <td>@user.getEmail</td>
+                  <td>@user.getName</td>
+                  <td>@user.getAddress</td>
+                  <td>@user.getNumber</td>
+                  <td>@user.getPassword</td>
+                  <td>@user.getPoints</td>
+
+                 <td>
+                      <a href="@routes.HomeController.updateProfile(user.getEmail)" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+              
+				    </tr>
+					
+          </tbody>
+        </table>
+          <table class="table table-bordered table-hover table-condensed">
+          <thead>
+            <h1> Loaned Items </h1>
+          <!-- The header row-->
+          <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+          </tr>
+          </thead>
+          <tbody>
+            <!-- Product row(s) -->
+					<!-- Start of For loop - For each p in products add a row -->
+          
+			        <tr>
+                  <td>@user.getuserLoan</td>
+                  <td>@user.getEmail</td>
+                 <td>
+                      <a href="#" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+              
+				    </tr>
+					
+          </tbody>
+        </table>
+      </div>
+  </div>
+}

@@ -1,0 +1,73 @@
+@(products: List[models.Product], categories: List[models.Category], user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@admin.adminMain("Products", user) {
+   <!-- HTML content for the index view -->
+  <div class="row" style ="margin-top: 25px">
+                  <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="SubTitles" style="color:black;">Books</h4>
+                    </div>
+                    <div class="panel-body">
+                            @if(flash.containsKey("success")) {
+              <div class="alert alert-success">
+              @flash.get("success")
+              </div>
+          }
+                        <p>
+                            <a href="@routes.AdminController.addProduct()">
+                                <button class="btn btn-primary">Add a Product</button>
+                            </a>
+                        </p>
+          <table class="table table-bordered table-hover table-condensed">
+          <thead>
+          <!-- The header row-->
+          <tr>
+            <th style="color:black;">ID</th>
+            <th style="color:black;">Name</th>
+            <th style="color:black;">Category</th>
+            <th style="color:black;">Description</th>
+            <th style="color:black;">Stock</th>
+              <th style="color:black;">Edit</th>
+              <th style="color:black;">Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+            <!-- Product row(s) -->
+					<!-- Start of For loop - For each p in products add a row -->
+          @for(p <- products) {
+			        <tr>
+                  <td style="color:black;">@p.getId</td>
+                  <td style="color:black;">@p.getName</td>
+                  <td style="color:black;">@p.getCategory.getName</td>
+                  <td style="color:black;">@p.getDescription</td>
+                  <td style="color:black;">@p.getStock</td>
+
+                  <!-- Edit product button -->
+                  <td>
+                      <a href="@routes.AdminController.updateProduct(p.getId)" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+                  <!-- Delete product button -->
+                  <td>
+                      <a href="@routes.AdminController.deleteProduct(p.getId)" class="btn-xs btn-danger"
+                        onclick="return confirmDel();">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </a>
+                  </td>
+				    </tr>
+					} <!-- End of For loop -->
+          </tbody>
+        </table>
+
+      </div>
+  </div>
+
+  <script>
+    // JavaScript function returns true if user clicks yes, otherwise, false
+    function confirmDel() {
+        return confirm('Are you sure?');
+    }
+  </script>
+}

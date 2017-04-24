@@ -1,0 +1,70 @@
+@(users: List[models.users.Users], user: models.users.Users   )
+
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@admin.adminMain("Users", user) {
+   <!-- HTML content for the index view -->
+  <div class="row" style ="margin-top: 25px">
+                  <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="SubTitles" style="color:black;">Users</h4>
+                    </div>
+                    <div class="panel-body">
+                            @if(flash.containsKey("success")) {
+              <div class="alert alert-success">
+              @flash.get("success")
+              </div>
+          }
+          <table class="table table-bordered table-hover table-condensed" >
+          <thead>
+          <!-- The header row-->
+          <tr >
+            <th style="color:black;">Email</th>
+            <th style="color:black;">Name</th>
+            <th style="color:black;">Address</th>
+            <th style="color:black;">Number</th>
+            <th style="color:black;">Password</th>
+            <th style="color:black;">Points</th>
+              <th style="color:black;">Edit</th>
+              <th style="color:black;">Delete</th>
+          </tr>
+          </thead>
+          <tbody>
+            <!-- Product row(s) -->
+					<!-- Start of For loop - For each p in products add a row -->
+          @for(p <- users) {
+			        <tr>
+                  <td style="color:black;">@p.getEmail</td>
+                  <td style="color:black;">@p.getName</td>
+                  <td style="color:black;">@p.getAddress</td>
+                  <td style="color:black;">@p.getNumber</td>
+                  <td style="color:black;">@p.getPassword</td>
+                  <td style="color:black;">@p.getPoints</td>
+
+                 <td>
+                      <a href="@routes.AdminController.updateUsers(p.getEmail)" class="btn-xs btn-danger">
+                      <span class="glyphicon glyphicon-pencil"></span></a>
+                  </td>
+                  <!-- Delete product button -->
+                  <td>
+                      <a href="@routes.AdminController.deleteUsers(p.getEmail)" class="btn-xs btn-danger"
+                        onclick="return confirmDel();">
+                        <span class="glyphicon glyphicon-trash"></span>
+                      </a>
+                  </td>
+				    </tr>
+					} <!-- End of For loop -->
+          </tbody>
+        </table>
+      </div>
+                </div>
+
+
+  <script>
+    // JavaScript function returns true if user clicks yes, otherwise, false
+    function confirmDel() {
+        return confirm('Are you sure?');
+    }
+  </script>
+}

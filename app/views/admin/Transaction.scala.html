@@ -1,0 +1,58 @@
+@(Transaction: List[models.Users_library], user: models.users.Users)
+
+<!-- Pass page title and content {html between braces} to the main view -->
+@admin.adminMain("transaction", user) {
+
+    <!-- HTML content for the index view -->
+    <div class="container-fluid">
+
+            <!-- Wrapper -->
+        <section id="wrapper">
+
+                <!-- One -->
+            <section id="one" class="wrapper spotlight style1">
+                <div class="inner">
+
+                    <div class="content">
+                        <div class="row">
+                            <div class="content">
+                                <table class="table table-bordered table-hover table-condensed">
+                                    <thead>
+                                            <!-- The header row-->
+
+                                        <h1>All User's Transactions</h1>
+
+                                        <tr>
+
+                                            <th>ID</th>
+                                            <th>Product ID</th>
+                                            <th>User Email</th>
+                                            <th>Date Transaction</th>
+                                            <th>Expire Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <!-- Product row(s) -->
+                                            <!-- Start of For loop - For each p in products add a row -->
+                                        @for(p <- Transaction) {
+                                            <tr>
+                                                <td>@p.getId</td>
+                                                <td>@p.getUser_product_id</td>
+                                                <td>@p.getUser_email</td>
+                                                <td>@p.getDate_transaction</td>
+                                                <td>@p.getExpiring_date</td>
+
+
+                                            </tr>
+                                        } <!-- End of For loop -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </section>
+    </div>
+
+}
