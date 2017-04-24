@@ -15,9 +15,12 @@ a {
 }
 
 a:hover {
-	color:#eeeeee;
+	color:#008000;
 }
 
+a:visited { 
+    color: white;
+}
 
 
 #wrapper

@@ -22,17 +22,33 @@
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
     </head>
     <body>
-    <!-- start of nav section -->
-        @if(title == "service" || title == "transaction"){
-        <header id="header">
-            <nav>
-                    <!-- nav header/ branding -->
-                <div class="navbar-header">
-                    <span class="glyphicon glyphicon-book"></span> DUT Library
-                </div>
-                    <!-- List containing nav links -->
-                <ul class="nav navbar-nav">
-                    <li @if(title == "service"){class="active"}><a href="@routes.AdminController.service()">Service</a></li>
+
+
+
+
+
+
+<!-- Page Wrapper -->
+            <div id="page-wrapper">
+                        <!--OTHER PAGE-->
+                        <!-- Header -->
+@if(title == "service" || title == "transaction"){
+                    <header id="header">
+			
+                        <h1><a href="@routes.HomeController.index()"><span class="glyphicon glyphicon-book"></span>DUT Library</a></h1>
+                        <nav>
+                            <a href="#menu">Menu</a>
+                        </nav>
+			
+                    </header>
+}
+
+            <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                     <li @if(title == "service"){class="active"}><a href="@routes.AdminController.service()">Service</a></li>
                     <li @if(title == "transaction"){class="active"}><a href="@routes.AdminController.Transaction()">Transactions</a></li>
                     <li @if(title == "Login"){class="active"}>
                     @if(user != null){
@@ -42,9 +58,9 @@
                     }
                     </li>
                 </ul>
-             </nav>
-            </header>
-        }
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
 
     
     <div class="container-fluid">

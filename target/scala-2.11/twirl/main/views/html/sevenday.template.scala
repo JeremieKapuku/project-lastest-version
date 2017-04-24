@@ -51,7 +51,7 @@ Seq[Any](format.raw/*4.76*/("""
 			<div class="content">
 
 				<div class="actions">
-					<h2>Item has been stored within your profile. Enter continue to confirm your loan.</h2>
+					<h2>Processing...</h2>
 					<input type="submit" value="Continue" class="btn btn-primary">
 					<a href=""""),_display_(/*25.16*/routes/*25.22*/.HomeController.rent()),format.raw/*25.44*/(""""></a>
 
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*4.76*/("""
 object sevenday extends sevenday_Scope0.sevenday_Scope1.sevenday
               /*
                   -- GENERATED --
-                  DATE: Mon Apr 24 12:25:34 IST 2017
+                  DATE: Mon Apr 24 16:50:03 IST 2017
                   SOURCE: /home/wdd/webapps/project-lastest-version/app/views/sevenday.scala.html
-                  HASH: a27e8c734c486686015d3334fb79fb116c13835f
-                  MATRIX: 841->109|1010->183|1040->286|1068->289|1102->315|1141->317|1169->319|1287->411|1405->519|1446->521|1476->524|1562->584|1660->661|1690->665|1785->739|1815->743|1912->819|1942->822|2275->1128|2290->1134|2333->1156|2415->1208|2443->1209|2504->1240|2532->1241
+                  HASH: 72c36d534251434e874d644ecea313853cf89c36
+                  MATRIX: 841->109|1010->183|1040->286|1068->289|1102->315|1141->317|1169->319|1287->411|1405->519|1446->521|1476->524|1562->584|1660->661|1690->665|1785->739|1815->743|1912->819|1942->822|2210->1063|2225->1069|2268->1091|2350->1143|2378->1144|2439->1175|2467->1176
                   LINES: 30->4|35->4|37->6|39->8|39->8|39->8|40->9|43->12|43->12|43->12|44->13|45->14|45->14|46->15|46->15|47->16|47->16|49->18|56->25|56->25|56->25|62->31|62->31|64->33|64->33
                   -- GENERATED --
               */

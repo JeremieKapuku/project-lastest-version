@@ -29,3 +29,9 @@ h2-browser
 run
 h2-browser
 run
+h2-browser
+run
+h2-browser
+run
+git push -u origin master
+exit
