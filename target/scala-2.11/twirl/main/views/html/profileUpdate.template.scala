@@ -78,8 +78,8 @@ Seq[Any](format.raw/*4.78*/("""
 object profileUpdate extends profileUpdate_Scope0.profileUpdate_Scope1.profileUpdate
               /*
                   -- GENERATED --
-                  DATE: Sat Apr 22 20:11:52 IST 2017
-                  SOURCE: /home/wdd/webapps/project-latest-version/app/views/profileUpdate.scala.html
+                  DATE: Mon Apr 24 12:25:35 IST 2017
+                  SOURCE: /home/wdd/webapps/project-lastest-version/app/views/profileUpdate.scala.html
                   HASH: 6b468a2ec9a1d395653bae3cd88369eb34c7c8e1
                   MATRIX: 860->109|1031->185|1061->288|1089->291|1125->319|1164->321|1197->327|1288->392|1397->491|1438->493|1467->495|1542->544|1637->618|1667->622|1763->697|1795->703|1897->784|1926->787|2026->866|2058->872|2162->955|2191->957|2343->1082|2358->1088|2404->1113|2464->1146|2479->1152|2526->1177|2556->1178|2643->1235|2671->1236
                   LINES: 30->4|35->4|37->6|39->8|39->8|39->8|42->11|43->12|43->12|43->12|44->13|48->17|48->17|49->18|49->18|50->19|50->19|51->20|51->20|52->21|52->21|53->22|56->25|56->25|56->25|56->25|56->25|56->25|56->25|59->28|59->28

@@ -1,8 +1,8 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/evolutions,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/evolutions)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/application.conf,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/routes,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/routes)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/logback.xml,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/evolutions/default,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/evolutions/default)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/evolutions/default/2.sql,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/evolutions/default/2.sql)[0m
-[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-latest-version/conf/evolutions/default/1.sql,/home/wdd/webapps/project-latest-version/target/scala-2.11/classes/evolutions/default/1.sql)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/evolutions,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/application.conf,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/routes,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/logback.xml,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/evolutions/default,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/evolutions/default/2.sql,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/evolutions/default/2.sql)[0m
+[0m[[0mdebug[0m] [0m	(/home/wdd/webapps/project-lastest-version/conf/evolutions/default/1.sql,/home/wdd/webapps/project-lastest-version/target/scala-2.11/classes/evolutions/default/1.sql)[0m

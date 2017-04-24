@@ -559,6 +559,11 @@ public class HomeController extends Controller {
     public Result addUsersSubmit(){
 
         Form<Users> newUsersForm = formFactory.form(Users.class).bindFromRequest();
+
+        if(newUsersForm.hasErrors()){
+            return badRequest(signup.render(newUsersForm));
+        }
+        
     try{
         Users newUser = newUsersForm.get();
         newUser.setPoints(100);

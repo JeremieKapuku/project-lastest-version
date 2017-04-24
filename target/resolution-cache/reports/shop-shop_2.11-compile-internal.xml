@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20170424094930"/>
+		date="20170424122340"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-ws_2.11">
 			<revision name="2.5.9" status="release" pubdate="20161008234106" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="93">
@@ -1016,9 +1016,9 @@
 				<artifacts>
 				</artifacts>
 			</revision>
-			<revision name="1.7.25" status="release" pubdate="20170316163632" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+			<revision name="1.7.25" status="release" pubdate="20170316163632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="3833" time="143" location="/home/wdd/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="true" original-local-location="/home/wdd/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5199" time="0" location="/home/wdd/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="true" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-slf4j_2.11" conf="compile, runtime" rev="1.7.16" rev-constraint-default="1.7.16" rev-constraint-dynamic="1.7.16" callerrev="2.4.10"/>
 				<caller organisation="org.asynchttpclient" name="netty-codec-dns" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.11"/>
 				<caller organisation="com.typesafe.play" name="play-netty-utils" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.5.9"/>
@@ -1039,7 +1039,7 @@
 				<caller organisation="org.asynchttpclient" name="netty-resolver" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="2.0.11"/>
 				<caller organisation="org.avaje" name="avaje-classpath-scanner" conf="compile, runtime" rev="[1.7,1.8)" rev-constraint-default="[1.7,1.8)" rev-constraint-dynamic="[1.7,1.8)" callerrev="2.1.1"/>
 				<artifacts>
-					<artifact name="slf4j-api" type="jar" ext="jar" status="successful" details="" size="41203" time="155" location="/home/wdd/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="/home/wdd/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
 					</artifact>
 				</artifacts>

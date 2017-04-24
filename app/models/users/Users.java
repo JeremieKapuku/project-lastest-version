@@ -13,6 +13,7 @@ import com.avaje.ebean.*;
 public class Users extends Model {
 
     @Id
+    @Constraints.Required
     private String email;
 
     @Constraints.Required

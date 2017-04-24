@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/home/wdd/webapps/project-latest-version/}root...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/home/wdd/webapps/project-lastest-version/}root...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: shop#shop_2.11;1.0-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for shop#shop_2.11;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies shop#shop_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@672764ec[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@1ce04787[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -161,38 +161,8 @@
 [0m[[0mdebug[0m] [0m	listing revisions from maven-metadata: https://repo1.maven.org/maven2/org/slf4j/slf4j-api/maven-metadata.xml[0m
 [0m[[0mdebug[0m] [0m	public: found md file for org.slf4j#slf4j-api;[1.7.1,1.7.99)[0m
 [0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom (1.7.25)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.25!slf4j-api.pom(pom.original) (143ms)[0m
-[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-parent;1.7.25 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.slf4j#slf4j-parent;1.7.25 {}[0m
-[0m[[0minfo[0m] [0mResolving org.slf4j#slf4j-parent;1.7.25 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.slf4j#slf4j-parent;1.7.25 {}[0m
-[0m[[0mdebug[0m] [0m		tried /home/wdd/.ivy2/local/org.slf4j/slf4j-parent/1.7.25/ivys/ivy.xml[0m
-[0m[[0mdebug[0m] [0m	local: no ivy file found for org.slf4j#slf4j-parent;1.7.25[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom[0m
-[0m[[0mdebug[0m] [0m	public: found md file for org.slf4j#slf4j-parent;1.7.25[0m
-[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom (1.7.25)[0m
-[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.pom[0m
-[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.slf4j#slf4j-parent;1.7.25!slf4j-parent.pom(pom.original) (123ms)[0m
-[0m[[0mdebug[0m] [0m		tried /home/wdd/.ivy2/local/org.slf4j/slf4j-parent/1.7.25/jars/slf4j-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0m		tried /home/wdd/play/repository/org.slf4j/slf4j-parent/1.7.25/jars/slf4j-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried /home/wdd/play/repository/org.slf4j/slf4j-parent/1.7.25/jars/slf4j-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/releases/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/releases/org/slf4j/slf4j-parent/1.7.25/slf4j-parent-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0m		tried http://repo.typesafe.com/typesafe/ivy-releases/org.slf4j/slf4j-parent/1.7.25/jars/slf4j-parent.jar[0m
-[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.slf4j/slf4j-parent/1.7.25/jars/slf4j-parent.jar[0m
-[0m[[0mdebug[0m] [0m		tried /home/wdd/.ivy2/local/org.slf4j/slf4j-api/1.7.25/jars/slf4j-api.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0m		[1.7.25] org.slf4j#slf4j-api[0m
-[0m[[0mdebug[0m] [0m	found org.slf4j#slf4j-api;1.7.25 in public[0m
+[0m[[0mdebug[0m] [0m	default-cache: revision in cache: org.slf4j#slf4j-api;1.7.25[0m
+[0m[[0mdebug[0m] [0m	found org.slf4j#slf4j-api;1.7.25 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[1.7.25] org.slf4j#slf4j-api;[1.7.1,1.7.99)[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm;7.6.1->org.slf4j#slf4j-api;[1.7.1,1.7.99) [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.avaje.ebeanorm#avaje-ebeanorm;7.6.1->com.fasterxml.jackson.core#jackson-core;2.6.5 [compile->master(compile)][0m
@@ -8426,12 +8396,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje.ebeanorm#avaje-ebeanorm-cluster;1.1.1!avaje-ebeanorm-cluster.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje#avaje-classpath-scanner-api;2.1!avaje-classpath-scanner-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.avaje#avaje-classpath-scanner;2.1.1!avaje-classpath-scanner.jar[0m
-[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar[0m
-[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar ...[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar[0m
-[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar.sha1[0m
-[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar[0m
-[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar (155ms)[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.11;2.5.9!play_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.5.9!play-iteratees_2.11.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#build-link;2.5.9!build-link.jar[0m
@@ -8569,19 +8534,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5854ms :: artifacts dl 295ms[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT compile produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT runtime produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT test produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT provided produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT optional produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT compile-internal produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT runtime-internal produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT test-internal produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT plugin produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT sources produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT docs produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT pom produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT scala-tool produced in /home/wdd/webapps/project-latest-version/target/resolution-cache/reports/shop-shop_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (5854ms resolve - 295ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 20098ms :: artifacts dl 686ms[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT compile produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT runtime produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT test produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT provided produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT optional produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT compile-internal produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT runtime-internal produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT test-internal produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT plugin produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT sources produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT docs produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT pom produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for shop#shop_2.11;1.0-SNAPSHOT scala-tool produced in /home/wdd/webapps/project-lastest-version/target/resolution-cache/reports/shop-shop_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (20098ms resolve - 686ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

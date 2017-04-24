@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/project-latest-version/conf/routes
-// @DATE:Sun Apr 23 21:34:01 IST 2017
+// @SOURCE:/home/wdd/webapps/project-lastest-version/conf/routes
+// @DATE:Mon Apr 24 12:25:30 IST 2017
 
 
 package router {

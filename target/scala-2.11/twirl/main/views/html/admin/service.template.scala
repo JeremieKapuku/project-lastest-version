@@ -77,8 +77,8 @@ Seq[Any](format.raw/*1.95*/("""
 object service extends service_Scope0.service
               /*
                   -- GENERATED --
-                  DATE: Sun Apr 23 23:10:25 IST 2017
-                  SOURCE: /home/wdd/webapps/project-latest-version/app/views/admin/service.scala.html
+                  DATE: Mon Apr 24 12:25:37 IST 2017
+                  SOURCE: /home/wdd/webapps/project-lastest-version/app/views/admin/service.scala.html
                   HASH: 326b93eb1bb7a26e66db41293c6ecf63b609b38a
                   MATRIX: 810->1|998->94|1026->96|1086->129|1114->130|1160->149|1188->150|1216->151|1263->173|1275->178|1310->205|1349->207|1381->213|1596->423|1641->440|1879->651|1894->657|1942->684|2151->866|2166->872|2211->896|2375->1042|2420->1059
                   LINES: 27->1|32->1|34->3|34->3|34->3|34->3|34->3|34->3|35->4|35->4|35->4|35->4|37->6|43->12|44->13|48->17|48->17|48->17|51->20|51->20|51->20|54->23|55->24
